@@ -41,7 +41,7 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
-    systemProperty("remoteUrl", System.getProperty("remoteUrl",""))
+    systemProperty("remoteURL", System.getProperty("remoteURL",""))
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
