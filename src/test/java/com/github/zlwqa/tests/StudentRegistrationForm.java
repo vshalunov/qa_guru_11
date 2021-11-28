@@ -1,11 +1,13 @@
 package com.github.zlwqa.tests;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.github.zlwqa.tests.TestData.studentNameResultField;
 import static com.github.zlwqa.tests.TestData.*;
 
+@Tag("RegistrationForm")
 @DisplayName("Проверка формы Student Registration Form")
 public class StudentRegistrationForm extends TestBase {
 
