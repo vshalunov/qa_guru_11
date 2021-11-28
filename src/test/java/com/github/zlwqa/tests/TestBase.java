@@ -16,10 +16,10 @@ import static java.lang.String.format;
 public class TestBase {
 
     RegistrationsPage registrationsPage = new RegistrationsPage();
-    private static CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
-    private static String login = credentials.login();
-    private static String password = credentials.password();
-    private static String remoteURL = format("https://%s:%s@%s", login, password, System.getProperty("remoteUrl"));
+    private static final CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
+    private static final String login = credentials.login();
+    private static final String password = credentials.password();
+    private static final String remoteURL = format("https://%s:%s@%s", login, password, System.getProperty("remoteUrl"));
 
     @BeforeAll
     static void setup() {
