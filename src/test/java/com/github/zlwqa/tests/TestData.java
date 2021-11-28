@@ -3,6 +3,8 @@ package com.github.zlwqa.tests;
 import com.github.javafaker.Faker;
 
 public class TestData {
+
+    public static final String MVIDEO_URL = "https://www.mvideo.ru/";
     public static String
             studentNameResultField = "Student Name",
             studentEmailResultField = "Student Email",
