@@ -53,10 +53,10 @@ tasks.withType(Test) {
         }
     }
 }
-task RegistrationForm(type: Test){
+task StudentRegistrationForm(type: Test){
     systemProperty("remoteURL", System.getProperty("remoteURL",""))
     useJUnitPlatform{
-        includeTags "RegistrationForm"
+        includeTags "StudentRegistrationForm"
     }
 }
 
