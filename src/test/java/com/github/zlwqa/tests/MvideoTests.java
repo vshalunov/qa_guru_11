@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.github.zlwqa.tests.TestData.MVIDEO_URL;
 
 @Tag("MvideoTests")
+@DisplayName("Тесты для Мвидео")
 public class MvideoTests extends TestBase {
 
     @ValueSource(strings = {"беспроводной контроллер playstation 5 dualsense rainbo ice banana",
