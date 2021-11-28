@@ -19,13 +19,13 @@ public class TestBase {
     private static CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
     private static String login = credentials.login();
     private static String password = credentials.password();
-    private static String remoteURL = format("https://%s:%s@%s", login, password, System.getProperty("remoteURL"));
+    private static String URLremote = format("https://%s:%s@%s", login, password, System.getProperty("remoteURL"));
 
     @BeforeAll
     static void setup() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         Configuration.browserSize = "1920x1080";
-        Configuration.remote = remoteURL;
+        Configuration.remote = URLremote;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
