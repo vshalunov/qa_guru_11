@@ -53,9 +53,16 @@ tasks.withType(Test) {
         }
     }
 }
-task tests_tags(type: Test){
+task RegistrationForm(type: Test){
     systemProperty("remoteURL", System.getProperty("remoteURL",""))
     useJUnitPlatform{
-        includeTags System.getProperty("tag", "")
+        includeTags "RegistrationForm"
+    }
+}
+
+task MvideoTests(type: Test){
+    systemProperty("remoteURL", System.getProperty("remoteURL",""))
+    useJUnitPlatform{
+        includeTags "MvideoTests"
     }
 }
