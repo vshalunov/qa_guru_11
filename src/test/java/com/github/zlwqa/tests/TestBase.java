@@ -19,7 +19,7 @@ public class TestBase {
     private static final CredentialsConfig credentials = ConfigFactory.create(CredentialsConfig.class);
     private static final String login = credentials.login();
     private static final String password = credentials.password();
-    private static final String remoteURL = format("https://%s:%s@%s", login, password, System.getProperty("url"));
+    private static final String remoteURL = format("https://%s:%s@%s", login, password, System.getProperty("remoteUrl"));
 
     @BeforeAll
     static void setup() {

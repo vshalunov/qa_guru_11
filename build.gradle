@@ -41,6 +41,7 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
+    systemProperty("remoteUrl", System.getProperty("remoteUrl",""))
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
@@ -53,7 +54,8 @@ tasks.withType(Test) {
     }
 }
 task tests_tags(type: Test){
+    systemProperty("remoteURL", System.getProperty("remoteURL",""))
     useJUnitPlatform{
-        includeTags System.getProperty("tag", "tag")
+        includeTags System.getProperty("tag", "")
     }
 }
